@@ -1,7 +1,7 @@
 server {
         listen 80 default_server;
         server_name  hotspot.localnet;
-        root /var/www/html/nginx/;
+        root /var/www/html/;
 
 # Logs
 #       access_log /var/log/nginx/captive.access.log;
