@@ -26,8 +26,8 @@ echo "┌───────────────────────�
 echo "|Installing and configuring nginx"
 echo "└─────────────────────────────────────────"
 apt-get install nginx -yqq
-wget -q https://raw.githubusercontent.com/tretos53/Captive-Portal/master/default_nginx -O /etc/nginx/sites-enabled/default
-wget -q https://raw.githubusercontent.com/tretos53/Captive-Portal/master/index.php -O  /var/www/html/index.php
+wget -q https://raw.githubusercontent.com/ninjaspl0it/Captive-Portal/master/default_nginx -O /etc/nginx/sites-enabled/default
+wget -q https://raw.githubusercontent.com/ninjaspl0it/Captive-Portal/master/index.php -O  /var/www/html/index.php
 
 echo "┌─────────────────────────────────────────"
 echo "|Installing dnsmasq"
@@ -37,12 +37,12 @@ apt-get install dnsmasq -yqq
 echo "┌─────────────────────────────────────────"
 echo "|Configuring wlan0"
 echo "└─────────────────────────────────────────"
-wget -q https://raw.githubusercontent.com/tretos53/Captive-Portal/master/dhcpcd.conf -O /etc/dhcpcd.conf
+wget -q https://raw.githubusercontent.com/ninjaspl0it/Captive-Portal/master/dhcpcd.conf -O /etc/dhcpcd.conf
 
 echo "┌─────────────────────────────────────────"
 echo "|Configuring dnsmasq"
 echo "└─────────────────────────────────────────"
-wget -q https://raw.githubusercontent.com/tretos53/Captive-Portal/master/dnsmasq.conf -O /etc/dnsmasq.conf
+wget -q https://raw.githubusercontent.com/ninjaspl0it/Captive-Portal/master/dnsmasq.conf -O /etc/dnsmasq.conf
 
 echo "┌─────────────────────────────────────────"
 echo "|configuring dnsmasq to start at boot"
@@ -57,7 +57,7 @@ apt-get install hostapd -yqq
 echo "┌─────────────────────────────────────────"
 echo "|Configuring hostapd"
 echo "└─────────────────────────────────────────"
-wget -q https://raw.githubusercontent.com/tretos53/Captive-Portal/master/hostapd.conf -O /etc/hostapd/hostapd.conf
+wget -q https://raw.githubusercontent.com/ninjaspl0it/Captive-Portal/master/hostapd.conf -O /etc/hostapd/hostapd.conf
 sed -i -- 's/#DAEMON_CONF=""/DAEMON_CONF="\/etc\/hostapd\/hostapd.conf"/g' /etc/default/hostapd
 
 echo "┌─────────────────────────────────────────"
